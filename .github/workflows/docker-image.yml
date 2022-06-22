@@ -35,5 +35,5 @@ jobs:
           message: '${{ steps.bump-semver.outputs.new_version }}: PR #${{ github.event.pull_request.number }} ${{ github.event.pull_request.title }}'
 
       - name: Get Image Tag
-        run echo "${{ steps.bump-semver.outputs.new_version }}"
+        run: echo "${{ steps.bump-semver.outputs.new_version }}"
         # run: echo "${{ env.registry }}/${{ env.reponame }}:${{ env.BRANCH }}-${{ steps.versioning.outputs.version }}"
